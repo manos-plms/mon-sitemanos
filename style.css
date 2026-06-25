@@ -1,0 +1,154 @@
+/* Style pour flyer numérique BTS SIO */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #1f2937 0%, #111827 45%, #0b1120 100%);
+    color: #f8fafc;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+.flyer {
+    width: min(960px, 100%);
+    background: linear-gradient(180deg, rgba(15,23,42,.95), rgba(30,41,59,.98));
+    border: 1px solid rgba(148,163,184,.18);
+    border-radius: 28px;
+    box-shadow: 0 30px 80px rgba(15,23,42,.5);
+    overflow: hidden;
+}
+
+.header {
+    padding: 40px 36px 28px;
+    background: linear-gradient(135deg, rgba(59,130,246,.85), rgba(14,165,233,.75));
+    color: #ecfeff;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+.header p {
+    margin: 12px 0 0;
+    font-size: 1.05rem;
+    opacity: .92;
+}
+
+.content {
+    padding: 32px 36px 28px;
+    display: grid;
+    gap: 22px;
+}
+
+.section {
+    background: rgba(15,23,42,.75);
+    border: 1px solid rgba(148,163,184,.14);
+    border-radius: 22px;
+    padding: 24px 26px;
+}
+
+.section h2 {
+    margin: 0 0 12px;
+    font-size: 1.45rem;
+    color: #c7d2fe;
+}
+
+.section p {
+    margin: 0;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 10px 16px;
+    margin-top: 8px;
+    border-radius: 999px;
+    background: rgba(56,189,248,.18);
+    color: #bae6fd;
+    font-weight: 600;
+    letter-spacing: .02em;
+}
+
+.footer {
+    padding: 22px 36px 28px;
+    border-top: 1px solid rgba(148,163,184,.12);
+    font-size: .95rem;
+    color: #94a3b8;
+    text-align: right;
+}
+
+@media (max-width: 640px) {
+    .flyer {
+        border-radius: 20px;
+    }
+
+    .header {
+        padding: 30px 24px 22px;
+    }
+
+    .content {
+        padding: 24px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .footer {
+        padding: 18px 24px 24px;
+        text-align: center;
+    }
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(148,163,184,.18);
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-decoration: none;
+    transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button.prev {
+    background: rgba(15,23,42,.75);
+    color: #bfdbfe;
+}
+
+.button.next {
+    background: rgba(59,130,246,.95);
+    color: #eff6ff;
+}
+
+.pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 36px 32px;
+}
+
+@media (max-width: 640px) {
+    .pager {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 18px 24px 24px;
+    }
+}
